@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "TSI Docs WebMCP",
+  "version": "1.0.0",
+  "description": "Exposes docs.tsi.com.tn (TSI-DOCUMENTATION, BookStack) to in-browser AI agents as WebMCP tools.",
+  "content_scripts": [
+    {
+      "matches": ["https://docs.tsi.com.tn/*"],
+      "js": ["src/bookstack.js", "src/tools.js", "src/register.js"],
+      "run_at": "document_idle",
+      "world": "MAIN"
+    }
+  ]
+}
